@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Compac</title>
+  <meta content name="description">
+  <meta content name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+<style>
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+}
+.grid-item {
+  border-radius: 2px;
+  text-transform: uppercase;
+  font-size: 25px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding: 20px;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s, font-size 0.3s;
+}
+
+.grid-item:hover {
+   /* Change this color to your preferred hover background color */
+  color: #95d5b2; /* Change this color to your preferred hover text color */
+  font-size: 1.8em; /* Adjust this value to your preferred hover font size */
+}
+
+@media (max-width: 768px) {
+  /* For tablets: 2 columns */
+  .grid-container {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(11, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  /* For mobile phones: 1 column */
+  .grid-container {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(21, 1fr);
+  }
+}
+
+  .service-item:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Add a box shadow on hover */
+    transform: scale(1.05); /* Scale up the card on hover */
+  }
+  .service-item {
+    transition: transform 0.5s ease, box-shadow 0.5s ease; /* Added transition property */
+  }
+
+  #clients {
+    padding: 60px 0;
+  }
+  
+  #clients img {
+    opacity: 0.8;
+    transition: 0.3s;
+  }
+  
+  #clients img:hover {
+    opacity: 1;
+  }
+  
+  #clients .swiper-pagination {
+    margin-top: 30px;
+    position: relative;
+  }
+  
+  #clients .swiper-pagination .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    opacity: 1;
+    border: 1px solid #18d26e;
+  }
+  
+  #clients .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: #18d26e;
+  }
+ 
+  
+  
+</style>
+</head>
+
+
+<body>
+  <!-- for navbar -->
+  <div id="navbarContainer"></div>
+  <!-- navbarend -->
+
+  <section id="hero" class="hero">
+
+    <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+
+      <div class="carousel-item active" style="background-image:url(assets/img/hero-carousel/light.jpg)">
+        <div class="info d-flex align-items-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-6 text-center">
+                <h2>CUTTING EDGE INDUSTRIAL &amp <span> ASSEMBLY SOLUTIONS</span></h2>
+                <!-- <p data-aos="fade-up">Best technically innovatiove industrial solution.</p> -->
+                <p data-aos="fade-up">Engineering Solutions for a World in Motion</p>
+                <a href="industrialProduct.html" class="btn-get-started">Read more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item" style="background-image:url(assets/img/hero-carousel/light.jpg)">
+        <div class="info d-flex align-items-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-6 text-center">
+                <h2 data data-aos-duration="3000">TECHNICAL SERVICES<span></span></h2>
+                <p data-aos="fade-up">Services for Total Productive Maintenance (TPM)</p>
+                <a data-aos="fade-up" data-aos-delay="200" href="#get-started" class="btn-get-started">Read more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item" style="background-image:
+        url(assets/img/hero-carousel/light.jpg)">
+        <div class="info d-flex align-items-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-6 text-center">
+                <h2 data-aos="fade-up" data-aos-duration="3000">ELECTRONIC LAB <span>& TMI SOLUTIONS</span></h2>
+                <p data-aos="fade-up">Transforming Learning with Technology</p>
+                <a data-aos="fade-up" data-aos-delay="200" href="#get-started" class="btn-get-started">Read more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+      </a>
+
+      <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+      </a>
+
+    </div>
+
+  </section>
+  <section id="clients">
+    <div class="container" data-aos="fade-up">
+
+      
+        <div class="section-header">
+          <h2>OUR BRANDS</h2>
+         
+
+      <div class="clients-slider swiper">
+        <div class="swiper-wrapper align-items-center">
+          <div class="swiper-slide"><img src="assets/img/clients/asian.png" class="img-fluid" alt=""></div>
+          <div class="swiper-slide"><img src="assets/img/clients/loctite.png" class="img-fluid" alt=""></div>
+          <div class="swiper-slide"><img src="assets/img/clients/loctite.png" class="img-fluid" alt=""></div>
+          <div class="swiper-slide"><img src="assets/img/clients/itw.png" class="img-fluid" alt=""></div>
+          <div class="swiper-slide"><img src="assets/img/clients/klueber.png" class="img-fluid" alt=""></div>
+          <div class="swiper-slide"><img src="assets/img/clients/lubeco.png" class="img-fluid" alt=""></div>
+          <div class="swiper-slide"><img src="assets/img/clients/mixtron.png" class="img-fluid" alt=""></div>
+          <div class="swiper-slide"><img src="assets/img/clients/oks.jpg" class="img-fluid" alt=""></div>
+        </div>
+        
+      </div>
+
+    </div>
+  </section>
+
+  <main id="main">
+
+   
+
+   
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section-bg" data-aos="fade-up">
+      <div class="container">
+        <div class="section-header">
+          <h2>Product & Services</h2>
+          <br>
+          <p>
+            At CTIL, we specialize exclusively in marketing and distributing top-quality specialty & industrial finished
+            products, customized for every critical application. Our comprehensive array of Futuristic Products,
+            Technical Services & Consultation is strategically designed to empower our clients to achieve peak business
+            performance while enhancing the efficiency of your equipments. Explore our complete range of
+            products & services!</p>
+        </div>
+
+        <div class="row gy-4" data-aos="fade-up">
+
+
+   
+         
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item position-relative" style="display: flex; flex-direction: column; align-items: center; justify-content: flex-start; height: 200px;">
+              <a href="productdetails/industrial.html">
+                <img src="assets/img/industrial.jpg" alt="Industrial Products" style="margin: 0 auto; width: 105px; height: 105px;">
+              </a>
+              <h3 style="text-align: center; margin-top: 2px;">
+                <a href="productdetails/industrial.html">INDUSTRIAL PRODUCTS</a>
+              </h3>
+            </div>
+          </div>
+
+
+
+
+
+         
+         
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item position-relative" style="display: flex; flex-direction: column; align-items: center; justify-content: flex-start; height: 200px;">
+              <a href="productdetails/industrial.html">
+                <img src="assets/img/customer-service.png" alt="Industrial Products" style="margin: 0 auto; width: 105px; height: 105px;">
+              </a>
+              <h3 style="text-align: center; margin-top: 2px;">
+                <a href="productdetails/industrial.html">SERVICES</a>
+              </h3>
+            </div>
+          </div>
+
+         
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item position-relative" style="display: flex; flex-direction: column; align-items: center; justify-content: flex-start; height: 200px;">
+              <a href="productdetails/industrial.html">
+                <img src="assets/img/technology.png" alt="Industrial Products" style="margin: 0 auto; width: 105px; height: 105px;">
+              </a>
+              <h3 style="text-align: center; margin-top: 2px;">
+                <a href="productdetails/industrial.html">TRAINING EQUIPMENTS</a>
+              </h3>
+            </div>
+          </div>
+          
+        </div>
+
+      </div>
+    </section>
+    <!-- End Services Section -->
+    <section id="services" class="services section-bg">
+      <div class="container">
+        <div class="section-header">
+          <h2>INDUSTRIAL PRODUCTS</h2>
+          <br>
+
+          <p>We offer some of the World’s leading technologies & brands in the field of High Performance Lubricants,
+            Adhesives, Sealants, Metal Working Fluids, Power Transmission, Powder Coatings, Protective Coatings, Release
+            Agents, Safety, Performance Equipments and many more. Products, we offer are designed to withstand the most
+            extreme operating conditions with unmatched performance, ensuring trouble free operations.</p>
+        </div>
+        <div class="row gy-4">
+
+         
+          <!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <img src="assets/img/conven.png" alt="Your Alt Text" style="width: 80px; height: 80px; margin-bottom: 10px; ">
+              <br>
+              <h3>Conventional Lubricants</h3>
+              <p >Speciality lubricants are advanced formulations designed to provide superior performance in extreme operating conditions, offering enhanced protection, reduced friction, and extended equipment life.</p>
+              
+              <a href="service-details.html" class="readmore  stretched-link">Read more <i
+                  class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+          
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fa-solid fa-arrow-up-from-ground-water"></i>
+              </div>
+              <h3>Eosle Commodi</h3>
+              <p>Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum hic non ut
+                nesciunt dolorem.</p>
+              <a href="service-details.html" class="readmore stretched-link">Learn more <i
+                  class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fa-solid fa-arrow-up-from-ground-water"></i>
+              </div>
+              <h3>Eosle Commodi</h3>
+              <p>Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum hic non ut
+                nesciunt dolorem.</p>
+              <a href="service-details.html" class="readmore stretched-link">Learn more <i
+                  class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fa-solid fa-arrow-up-from-ground-water"></i>
+              </div>
+              <h3>Eosle Commodi</h3>
+              <p>Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum hic non ut
+                nesciunt dolorem.</p>
+              <a href="service-details.html" class="readmore stretched-link">Learn more <i
+                  class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fa-solid fa-compass-drafting"></i>
+              </div>
+              <h3>Ledo Markt</h3>
+              <p>Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus ea aut. Vel qui id voluptas adipisci
+                eos earum corrupti.</p>
+              <a href="service-details.html" class="readmore stretched-link">Learn more <i
+                  class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fa-solid fa-trowel-bricks"></i>
+              </div>
+              <h3>Asperiores Commodit</h3>
+              <p>Non et temporibus minus omnis sed dolor esse consequatur. Cupiditate sed error ea fuga sit provident
+                adipisci neque.</p>
+              <a href="service-details.html" class="readmore stretched-link">Learn more <i
+                  class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fa-solid fa-helmet-safety"></i>
+              </div>
+              <h3>Velit Doloremque</h3>
+              <p>Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam corporis aut. Sed animi at autem
+                alias eius labore.</p>
+              <a href="service-details.html" class="readmore stretched-link">Learn more <i
+                  class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fa-solid fa-arrow-up-from-ground-water"></i>
+              </div>
+              <h3>Dolori Architecto</h3>
+              <p>Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure. Corrupti
+                recusandae ducimus enim.</p>
+              <a href="service-details.html" class="readmore stretched-link">Learn more <i
+                  class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+    </section>
+    <section id="services" class="services section-bg">
+      <div class="container">
+        <div class="section-header">
+          <h2>SERVICES</h2>
+          <br>
+          <p>Our vast experience of decades in field, know-how and application expertise coupled with deep understanding of customer’s needs has enabled us extend wide range of Specialty Services to our clients. These Niche services are proven in optimized costs, improved equipment availability, maximum efficiencies, meet sustainability goals, reduced carbon footprints and establish best global practices with the clients. All this, leading to reduction in – TOTAL COST OF OWNERSHIP.</p>
+        </div>
+        <br>
+        <div class="row gy-4">
+
+         
+          <!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <img src="assets/img/conven.png" alt="Your Alt Text" style="width: 80px; height: 80px; margin-bottom: 10px; ">
+              <br>
+              <h3>Coolant Management</h3>
+              <p >Speciality lubricants are advanced formulations designed to provide superior performance in extreme operating conditions, offering enhanced protection, reduced friction, and extended equipment life.</p>
+              
+              <a href="service-details.html" class="readmore  stretched-link">Read more <i
+                  class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+          
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fa-solid fa-arrow-up-from-ground-water"></i>
+              </div>
+              <h3>Cost Optimisation</h3>
+              <p>Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum hic non ut
+                nesciunt dolorem.</p>
+              <a href="service-details.html" class="readmore stretched-link">Learn more <i
+                  class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fa-solid fa-arrow-up-from-ground-water"></i>
+              </div>
+              <h3>Lubrication Management</h3>
+              <p>Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum hic non ut
+                nesciunt dolorem.</p>
+              <a href="service-details.html" class="readmore stretched-link">Learn more <i
+                  class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fa-solid fa-arrow-up-from-ground-water"></i>
+              </div>
+              <h3>Pre-Applied Coatings</h3>
+              <p>Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum hic non ut
+                nesciunt dolorem.</p>
+              <a href="service-details.html" class="readmore stretched-link">Learn more <i
+                  class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fa-solid fa-compass-drafting"></i>
+              </div>
+              <h3>Plant Survey</h3>
+              <p>Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus ea aut. Vel qui id voluptas adipisci
+                eos earum corrupti.</p>
+              <a href="service-details.html" class="readmore stretched-link">Learn more <i
+                  class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fa-solid fa-trowel-bricks"></i>
+              </div>
+              <h3>Special Coating and Epoxy Flouring</h3>
+              <p>Non et temporibus minus omnis sed dolor esse consequatur. Cupiditate sed error ea fuga sit provident
+                adipisci neque.</p>
+              <a href="service-details.html" class="readmore stretched-link">Learn more <i
+                  class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+         
+        </div>
+
+      </div>
+    </section>
+    <section id="services" class="services section-bg">
+      <div class="container">
+        <div class="section-header">
+          <h2>TRAINING EQUIPMENTS</h2>
+          <br>
+          <p>We design and produce a diverse selection of laboratory equipment tailored for educational institutions' and industrial training needs. Additionally, we offer comprehensive Turn-Key solutions for establishing complete engineering laboratories in engineering institutes & industries.</p>
+        </div>
+        <br>
+        <div class="row gy-4">
+
+         
+          <!-- End Service Item -->
+
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fa-solid fa-arrow-up-from-ground-water"></i>
+              </div>
+              <h3>Basic Electronic Lab</h3>
+              <p>Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum hic non ut
+                nesciunt dolorem.</p>
+              <a href="service-details.html" class="readmore stretched-link">Learn more <i
+                  class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fa-solid fa-compass-drafting"></i>
+              </div>
+              <h3>Electric Engineering Lab</h3>
+              <p>Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus ea aut. Vel qui id voluptas adipisci
+                eos earum corrupti.</p>
+              <a href="service-details.html" class="readmore stretched-link">Learn more <i
+                  class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fa-solid fa-trowel-bricks"></i>
+              </div>
+              <h3>Physics Lab</h3>
+              <p>Non et temporibus minus omnis sed dolor esse consequatur. Cupiditate sed error ea fuga sit provident
+                adipisci neque.</p>
+              <a href="service-details.html" class="readmore stretched-link">Learn more <i
+                  class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+         
+        </div>
+
+      </div>
+    </section>
+    <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+      <div class="container feature px-lg-0">
+          <div class="row g-0 mx-lg-0">
+              <div class="col-lg-6 feature-text py-5 wow fadeIn" data-wow-delay="0.5s">
+                  <div class="p-lg-5 ps-lg-0">
+                      <div class="section-title text-start">
+                          <h1 class="display-5 mb-4"> <b>Why Choose Us</b> </h1>
+                      </div>
+                      <p class="mb-4 pb-2">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo erat amet</p>
+                      <div class="row g-4">
+                          <div class="col-6">
+                              <div class="d-flex align-items-center">
+                                  <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
+                                      <i class="fa fa-check fa-2x text-primary"></i>
+                                  </div>
+                                  <div class="ms-4">
+                                      <p class="mb-2">Quality</p>
+                                      <h5 class="mb-0">Services</h5>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-6">
+                              <div class="d-flex align-items-center">
+                                  <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
+                                      <i class="fa fa-user-check fa-2x text-primary"></i>
+                                  </div>
+                                  <div class="ms-4">
+                                      <p class="mb-2">Creative</p>
+                                      <h5 class="mb-0">Designers</h5>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-6">
+                              <div class="d-flex align-items-center">
+                                  <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
+                                      <i class="fa fa-drafting-compass fa-2x text-primary"></i>
+                                  </div>
+                                  <div class="ms-4">
+                                      <p class="mb-2">Free</p>
+                                      <h5 class="mb-0">Consultation</h5>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-6">
+                              <div class="d-flex align-items-center">
+                                  <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
+                                      <i class="fa fa-headphones fa-2x text-primary"></i>
+                                  </div>
+                                  <div class="ms-4">
+                                      <p class="mb-2">Customer</p>
+                                      <h5 class="mb-0">Support</h5>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-6 pe-lg-0" style="min-height: 400px;">
+                  <div class="position-relative h-100">
+                      <img class="position-absolute img-fluid w-100 h-100" src="assets/img/feature.jpg" style="object-fit: cover;" alt="">
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+    <!-- ======= Recent Blog Posts Section ======= -->
+    <section id="recent-blog-posts" class="recent-blog-posts">
+      <div class="container" data-aos="fade-up">
+  
+            <div class=" section-header">
+        <h2>INDUSTRIES WE DEAL WITH</h2>
+        <p>In commodi voluptatem excepturi quaerat nihil error autem
+          voluptate ut et officia consequuntu</p>
+      </div>
+
+      <div class="row gy-5">
+
+        <div class="grid-container">
+          <div class="grid-item">auto ancillaries</div>
+          <div class="grid-item">automotive</div>
+          <div class="grid-item">beverage</div>
+          <div class="grid-item">Construction</div>
+          <div class="grid-item">cement</div>
+          <div class="grid-item">cycle</div>
+          <div class="grid-item">food</div>
+          <div class="grid-item">fmcg</div>
+          <div class="grid-item">plastics</div>
+          <div class="grid-item">PHARMACEUTICAL          </div>
+          <div class="grid-item">paper packaging</div>
+          <div class="grid-item">power plants</div>
+          <div class="grid-item">paint</div> 
+          <div class="grid-item">Rubber</div>
+          <div class="grid-item">ropeways</div>
+          <div class="grid-item">refineries</div>
+          <div class="grid-item">railways</div>
+          <div class="grid-item">steel</div>
+          <div class="grid-item">tyre</div>
+          <div class="grid-item">textile</div>
+          
+
+
+         
+      </div>
+
+      </div>
+    </section>
+    
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Testimonials</h2>
+          <p>Quam sed id excepturi ccusantium dolorem ut quis dolores nisi
+            llum nostrum enim velit qui ut et autem uia
+            reprehenderit sunt deleniti</p>
+        </div>
+
+        <div class="slides-2 swiper">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt>
+                  <h3>Saul Goodman</h3>
+                  <h4>Ceo &amp; Founder</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi
+                          bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi
+                          bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    Proin iaculis purus consequat sem cure digni ssim
+                    donec porttitora entum suscipit rhoncus.
+                    Accusantium quam, ultricies eget id, aliquam eget nibh
+                    et. Maecen aliquam, risus at semper.
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt>
+                  <h3>Sara Wilsson</h3>
+                  <h4>Designer</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi
+                          bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi
+                          bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    Export tempor illum tamen malis malis eram quae irure
+                    esse labore quem cillum quid cillum eram malis
+                    quorum velit fore eram velit sunt aliqua noster fugiat
+                    irure amet legam anim culpa.
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt>
+                  <h3>Jena Karlis</h3>
+                  <h4>Store Owner</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi
+                          bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi
+                          bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    Enim nisi quem export duis labore cillum quae magna
+                    enim sint quorum nulla quem veniam duis minim
+                    tempor labore quem eram duis noster aute amet eram
+                    fore quis sint minim.
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt>
+                  <h3>Matt Brandon</h3>
+                  <h4>Freelancer</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi
+                          bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi
+                          bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    Fugiat enim eram quae cillum dolore dolor amet nulla
+                    culpa multos export minim fugiat minim velit
+                    minim dolor enim duis veniam ipsum anim magna sunt
+                    elit fore quem dolore labore illum veniam.
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt>
+                  <h3>John Larson</h3>
+                  <h4>Entrepreneur</h4>
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i><i class="bi
+                          bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi
+                          bi-star-fill"></i>
+                  </div>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    Quis quorum aliqua sint quem legam fore sunt eram
+                    irure aliqua veniam tempor noster veniam enim
+                    culpa labore duis sunt culpa nulla illum cillum fugiat
+                    legam esse veniam culpa fore nisi cillum
+                    quid.
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="container">
+      <div class="row gy-3">
+        <div class="col-lg-3 col-md-6 d-flex">
+          <i class="bi bi-geo-alt icon"></i>
+          <div>
+            <h4>Address</h4>
+            <p>
+              LUDHIANA | MOHALI | JAMMU
+ <br>
+            <br>
+            </p>
+          </div>
+
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links d-flex">
+          <i class="bi bi-telephone icon"></i>
+          <div>
+            <h4>Contact us </h4>
+            <p>
+              <strong>Phone:</strong> 9216288066 <br>
+              <strong>Email:</strong> sales.chd@compactech.co.in<br>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links d-flex">
+          <i class="bi bi-clock icon"></i>
+          <div>
+            <h4>Opening Hours</h4>
+            <p>
+              <strong>Mon-Sat: 11AM</strong> - 23PM<br>
+              Sunday: Closed
+            </p>
+          </div>
+        </div> 
+
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Follow Us</h4>
+          <div class="social-links d-flex">
+            
+            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    
+
+  </footer>
+  <!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center
+        justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+  <script src="navbar.js"></script>
+</body>
+
+</html>
